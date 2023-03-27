@@ -208,10 +208,7 @@ class Generator
             file_put_contents(
                 $this->yamlDocsFile,
                 (new YamlDumper(2))->dump(
-                    json_decode(file_get_contents($this->docsFile), true),
-                    20,
-                    0,
-                    Yaml::DUMP_OBJECT_AS_MAP | Yaml::DUMP_EMPTY_ARRAY_AS_SEQUENCE
+                    json_decode(file_get_contents($this->docsFile), true), 20
                 )
             );
         }
